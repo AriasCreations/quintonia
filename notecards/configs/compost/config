@@ -1,0 +1,6 @@
+# Maximum scan radius to look for items
+SENSOR_DISTANCE=10
+#
+# Levels for 'Compost' prim
+MIN_HEIGHT=-0.54
+MAX_HEIGHT=0.546

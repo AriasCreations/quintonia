@@ -1,0 +1,43 @@
+Quintonia Extension Pack 2
+
+- Quintonia SatyrFarm HUD - Information
+
+This HUD allows you to eat and drink as you get hungry and thirsty.  It also gives you Quintonia points for your time spent wearing it (although the points counter stops if you get very hungry/thirsty!)
+
+Features:
+
+Clock:
+The clock shows how far through day or night it is.
+
+Indicators:
+Show your levels of  Hunger, Thirst, Drunkenness, Sickness.  If they go orange it's time to eat or drink. If they go red you may end up fainting!
+Points - builds up and then credits your Quintonia account with 20 points at regular intervals.
+
+Menu:
+Consume - lets you eat and drink items around you.  
+
+Status - shows your current levels of hunger etc.
+
+Info - Loads an info notecard.
+
+Recipes - Loads a notecard that shows you the recipes for the various food preparation items in the café.
+
+Points - Allows you to check your points balance. Also allows you to sell items for points.
+
+Scan - Scans around you and reports information about any animal you select. You can set the scan range from the 'options' menu (see below) - note that this scan only works with animals that have been 'upgraded' to the Quintonia version.    
+When scanning, animals will freeze and turn bright pink or blue depending upon their sex. Note that even eggs will show a color so only run if you don't mind knowing!  Animals return to normal after about 1 minute - this should help you keep a check on which animals have been scanned etc.
+
+OPTIONS
+Scan range - Set the scan range (up to 96m radius) for the scan option.
+Range disc - This option is only shown if you have permissions to rez an object. It will rez a disc of the same dimensions as the scan range. The disc is removed by touching it, but also it will vanish after about 5 minutes.
+
+Quiet - Select this to switch to having the HUD only display information on it's screen.
+Chatty - Select this to have information appear in your chat as well as showing on the screen.
+
+Pause - this pauses the HUD so your hunger, thirst etc will not change until you resume.
+
+More info and discussions at https://www.quintonia.net/forum/farming
+
+==  ==  ==  
+
+The extension packs available in Quintonia are modifications to the “Satyr Farm” system, which is an open source Farm system that contains fully functional plants, breedable animals, tools and food processing items. More information can be found at https://satyrfarm.github.io/

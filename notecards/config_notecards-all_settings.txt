@@ -1,0 +1,49 @@
+
+
+CONFIG NOTECARD OPTIONS
+
+# REZ_POS: Default rez position relative to root
+REZ_POSITION=<1,1,1>     
+
+# SENSOR_DISTANCE: How far to search (radius) when searching for items to add
+SENSOR_DISTANCE=10
+
+# ONE_PART: How much 1 unit of the product is
+ONE_PART=1
+
+# DROP_TIME: Storage levels are reduced by ONE_PART/10 every DROP_TIME days i.e. 1 is daily, 7 once a week etc
+DROP_TIME=0
+
+# INITIAL_LEVEL: How much product % to start with on rez
+INITIAL_LEVEL=0
+
+# MAX_ENERGY: Maximum storage capacity for the region in kWh
+
+# EXPIRES: How many days until the product expires (dies)
+EXPIRES=15
+
+# FLOWCOLOR (Optional) When emptying the product, what color are the  particles rezzed?
+FLOWCOLOR=<1.000, 0.805, 0.609>
+
+# MATURATION (Optional)Some products require some days to mature before they  are ready to  be used (e.g. wine) . How many days to spend in maturation?
+MATURATION=10
+
+# EXTRAPARAM (Optional)Extra parameter that will be passed to the consumer of this
+EXTRAPARAM=Hungry:-5|Thirsty:-5|Drunk:-5|Sick:-5
+
+# RANDOMIZE (Optional) If present and non-zero, will randomize the colour of prim at primlink specified 
+RANDOMIZE=3
+
+# TARGET (Optional) Name of target such as Table, Keg store etc 
+TARGET=SF Table 
+
+# TEXTCOLOR (Optional) Colour to use for float text. Default is white
+TEXTCOLOR=<1.0, 1.0, 1.0>
+
+(optional) Drop a sound inside the product object that will be played when using the object
+
+(optional) Drop a texture inside the product for the particles rezzed when used
+
+
+================================
+

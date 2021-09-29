@@ -1,0 +1,46 @@
+Quintonia Extension Pack 4
+
+- Modified Satyr Farm items -
+
+This pack contains modified versions of Satyr Farm items as follows:
+
+SF Square Field
+ Has two extra crops, Pumpkins & Soyabeans
+
+SF Herb Field
+ Has three extra crops, Flowers, Lettuce & Rosemary
+
+SatyrFarm Grapevine
+ Added Chillies
+
+SF Bee House
+ Getting stung decreases your health in the HUD
+ Bee hives can be linked together - all scripts besides the one in the root prim delete itself, while the root prim script will handle all hives  automatically.  This only works if the names of the hives are the same before linking.
+
+ 
+SatyrFarm Drier
+ Added product Leather
+
+SF Press
+ Added products Essential Oil & Soya milk
+ 
+SF Storage Rack
+ Added storage for extra crops and also herbs.
+ Items are colour coded Red=very low, Yellow=low, Green=okay, Blue=Full
+
+Added SF Yarn   This used by the loom (instead of thread) so adds extra level of production as below...
+(SF Yarn appears in a random colour when rezzed out)
+
+Changed one if the 'cookers' into a Vat to produce Yarn from Water, Thread & Flowers
+and Perfume from Wood Alcohol & Essential Oil
+
+Modified the Loom to use Yarn rather than thread and also added a Carpet
+
+SatyrFarm Microbrewery
+ Added Wood Alcohol, Sake & Mead and also tweaked some of the recipes:
+
+More info and discussions at https://www.quintonia.net/forum/farming
+
+==  ==  ==  
+
+The extension packs available in Quintonia are modifications to the “Satyr Farm” system, which is an open source Farm system that contains fully functional plants, breedable animals, tools and food processing items. More information can be found at https://satyrfarm.github.io/

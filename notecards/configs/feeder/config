@@ -1,0 +1,20 @@
+# Name of feeder
+TITLE=Rabbit Feeder
+#
+# Food feeder takes. Can have multiple items
+FOOD=Hay
+FOOD=Slop
+#
+# Where to get fodd from if auto food is on
+FOODTOWER=SF Storage
+#
+# Item to take from foodtower
+AUTOFOODITEM
+#
+# Levels for 'Water' prim
+WATER_ZMIN
+WATER_ZMAX
+#
+# Levels for 'Food'prim
+FOOD_ZMAX
+FOOD_ZMIN

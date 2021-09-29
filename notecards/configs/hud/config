@@ -1,0 +1,8 @@
+	# Radius to search for items to add/consume
+	SENSOR_DISTANCE=40
+	# Radius to scan for animals etc
+	SCAN_RANGE=96
+	# If 1 then HUD won't play sound effects and won't send messages to chat bar
+	QUIET_MODE=0
+	# Position to rez objects (e.g SF Provisions Box)
+	REZ_POSITION=<1.0, 1.0, -0.5>

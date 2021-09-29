@@ -1,0 +1,55 @@
+
+FIRST_NAME=Birdy
+LAST_NAME=Quinbot
+PROFILE=I help out around the park, always on the go!  I tend to mostly talk to myself.
+#
+# How far around control box to search for items
+RADIUS=60
+#
+# Set to 0 to stop the running commentary by the NPC
+CHATTY=1
+#
+#  Item name |  List of trees/plants and frequency to Plant from separated by  ','
+TREE=SF Square Field|4|Grain,Corn,Oats
+TREE=SF Small Field|4|Carrots,Potatoes,Tomatoes,Strawberries,Sugar cane,Peppers
+TREE=SF Rice Field|2|Rice,Cranberries
+TREE=SF Olive Tree|1|Olive Tree
+TREE=SF Big Tree|4|Apple Tree,Lemon Tree,Coffee Tree
+TREE=SF Big Tree|2|Cherry Tree,Orange Tree,Cocoa Tree,Lime Tree
+TREE=SatyrFarm Grapevine|2|Grapevine,Peas,Chillies
+TREE=SF Planter|1|Banana
+#
+# Feeders to check water level
+TREE=SF Feeder|4|
+TREE=SF Pig Feeder|2|
+TREE=SF Tiger Feeder|2|
+TREE=SF Rabbit Feeder|1|
+TREE=SF Fish Feeder|1|
+TREE=SF Chicken Feeder|2|
+TREE=SF Dog Feeder|1|
+TREE=SF Cat Feeder|1|
+#
+# Auto rez on restart region
+AUTO_REZ=1
+#
+ENABLE_COOKING=1
+# Optional
+ # Default 'slop' is made from water and potatoes,tomatoes,rice or apples, but can be changed here
+ WATER_NAME=SF Water
+ INGREDIENTS=SF Potatoes,SF Tomatoes,SF Rice,SF Apples
+ # Name of 'slop' product
+ COOKED_ITEM=SF Slop
+ # Name of the cooking device, default is SatyrFarm Kitchen
+ KITCHEN=SatyrFarm Kitchen
+ # Where to store cooked product (default is SF Fridge)
+ COOKED_STORE=SF Bulk Storage
+#
+ENABLE_HARVESTING=1
+# Optional - where to store harvested items (default is SF Storage Rack)
+HARVEST_STORE=SF Storage Rack
+# If some items don't go in main store you can list them and the alternative store
+SECONDARY_STORE=SF Oast House
+SECONDARY_ITEMS=SF Barley,SF Buckwheat,SF Foxtail Millet,SF Grain,SF Oats
+#
+# Name of the water well (default is SatyrFarm Well)
+WELL=SatyrFarm Well

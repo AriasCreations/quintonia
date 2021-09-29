@@ -1,0 +1,71 @@
+Quintonia Extension Pack 3 
+
+- Café - For use with Satyr Farm system
+
+This pack contains new or modified items to use as a kitchen / café with the Satyr Farm system.
+
+It will rez as a 10m x 6m platform with all items.
+
+* INFO *
+
+SF Bread Storage
+ Storage unit for: Bread, Tortillas
+
+SF Cake Storage
+ Storage unit for: Apple pie, Cherry cake, Coffee cake, Fruit pie, Gateaux, Meringue pie, Pavlova, Strawberry cake
+
+SF Refrigerator
+ A modified SF fridge that stores the following: Butter, Cheese, Chicken, Curd, Duck Meat, Eggs, Feta, Fish, Kefalotyri, Meat,Milk, Soyamilk, Tofu, Ice, Roasted veg
+
+SF Barrel Store
+ Each shelf holds a single barrel (beer, whiskey etc) - only works with barrels produced by the modified SatyrFarm Microbrewery in Quintonia extensions pack 4
+
+SF Keg Store
+ Each shelf holds a single keg (orange juice, lemonade etc)
+
+SF Cafe Hob
+ Produces the following: Cheesy fries, Chicken curry, Curd, Fries, Pasta, Salt, Stew, Tacos, Tofu
+
+SF Cafe Oven
+ Produces the following: Apple pie, Bread, Cherry cake, Coffee cake, Fruit pie, Gateaux, Meringue pie, Pavlova, Pizza, Roasted veg, Strawberry cake, Sugar, Tortillas
+
+SF Sink
+ A sink version of the well for water.
+
+SatyrFarm Grinder
+ Same as standard grinder but just included for completeness!  Makes coffee and cocoa
+
+SatyrFarm Juicer
+ Makes kegs of juice: Apple cider, Apple juice, Carrot juice, Grape juice, Lemon juice, Lemonade, Orange juice, Tomato juice
+
+SF Cheese Maker
+ Makes: Cheese, Feta, Kefalotyri
+
+SF Blender
+ Make smoothies & shakes: Strawberry smoothie, Sunshine smoothie, Strawberry milkshake, Chocolate milkshake, 
+
+SF Hot Drinks Maker
+ Makes the following: Black Coffee, Cappuccino, Latte, Pot of Tea, Cup of Tea, Green Tea, Hot Chocolate
+
+SF Drinks Maker
+ Makes various drinks using the kegs. Also makes a smoking pipe with pot: Apple juice glass, Grape juice glass, Orange juice glass, Tomato juice glass, Lemon juice glass, Lemonade jug, Carrot juice glass, Apple Cider glass, Beer glass, Wine glass, Cognac glass, Gin glass, Vodka glass, Whiskey glass, Sake glass, Bloody Mary, Pipe
+
+
+SF Salad Bar
+ Produces various food items: Salad, Greek salad, BLT sandwich, Roasted veg sandwich, Cheese sandwich, Chicken sandwich, Egg sandwich, Hamburger
+
+SF Ice creams
+ Produces cold desserts:
+
+Ice, Ice cream (random flavours!), Rum n Raisin, Ice sundae, Sorbet (random flavours!)
+
+
+SF Table & Cafe seat
+ If a cafe item is following you, when you touch it, instead of going to the ground it will seek out an empty table and put on a table cloth.  Only one item can go to one table.  If the cloth is on but no item is present, you can touch the table to remove the cloth.
+
+
+More info and discussions at https://www.quintonia.net/forum/farming
+
+==  ==  ==  
+
+The extension packs available in Quintonia are modifications to the “Satyr Farm” system, which is an open source Farm system that contains fully functional plants, breedable animals, tools and food processing items. More information can be found at https://satyrfarm.github.io/

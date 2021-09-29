@@ -1,0 +1,11 @@
+Creating new machines (kitchen.lsl)
+
+You should be able to create new machines by using the kitchen.lsl script. The recipe format is described above. You can add and modifying options in the ‘config’ notecard. If your machine requires that you sit on it while processing, set MUST_SIT=1 . The following conventions are also supported:
+
+	If you name one of the prims in the linkset 'product' it will get the texture set in the recipe card and be shown (alpha 0%) only during cooking.
+
+    If you name one of the prims in the linkset 'show_while_cooking' it will be shown during cooking only, and hidden afterwards. You can set an arbitrary alpha level for the link like 0.5 by naming it show_while_cooking 0.5
+
+    If you name one of the prims in the linkset 'spin' <0,2.0,0> it will spin in the specified vector local axis with spin rate of 2 while cooking. You can change the vector to point to the direction and spin rate that you wish.
+
+If you plan to create more complex functionality you should add an addon script to the processor. Do not modify the main script as your changes will be overwritten in the next release of the farm. The kitchen script sends a number of link_messages when actions happen. Search the kitchen.lsl script for llMessageLinked lines to see those messages and use them in your addon. 

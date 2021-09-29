@@ -1,0 +1,10 @@
+# minimum and maximum Z position of the  linked prim "Water" that shows water level
+WATER_ZMIN=-1.03815
+WATER_ZMAX=-0.37426
+#
+# Optional - object rez position
+REZ_POSITION=<0,2,0>
+#
+# Optional - name of liquid if not Water
+LIQUID=Well water
+

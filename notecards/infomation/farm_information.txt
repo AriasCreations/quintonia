@@ -1,0 +1,43 @@
+ F A R M   I N F O R M A T I O N 
+ 
+This notecard is a brief introduction to the farm. More in-depth information can be found using the Info button on the HUD menu (see below).   Everything about the farm also applies to the nature reserve,  petting zoo and café.
+
+WHAT IS THE HUD FOR?
+You can get the HUD from the welcome package in the welcome centre and also from the café.
+It is used for consuming food and drinks that you get from the café and other places - click the HUD to get the menu then click “Consume” to try to eat or drink anything that is near you.  You can also use it to sell produce for Quintonia points.   The four symbols show how hungry, thirsty, drunk and sick you are. You earn Quintonia points by having the HUD active when in Mintor as long as your hunger and thirst levels stay out of the red.
+
+
+FARM
+
+We suggest turning on music as there is birdsong during the day and 'countryside quiet' at night.
+
+To interact with the farm you need to have joined and then activated the Quintonia group (you can do that for free at the welcome centre).
+
+NOTE: Don't try to put items into your inventory or take them off Mintor as they will stop working properly (you can put the fishing rod into your inventory but be aware that it always resets the fishing progress when you wear it again).
+
+
+THINGS TO DO
+
+Fishing – Just past the greenhouse you will find a fishing spot by the river. You can get a free fishing rod then fish - standing plus a couple of stools for sitting also!  You will gradually fill up the fish pot as you fish.
+
+Water plants - click the Well. A bucket will be rezzed in front of the well. Touch a bucket and it will follow you. Touch it again to put it down. 
+Bring a bucket near a plant, then touch a plant to water it. All farm items work similarly.
+
+Meditate – there are a couple of meditation mats near the river. Just sit for some chilled Om’s
+
+Read a book – also near the river are a couple of book reading chairs. Sit and book will appear!
+
+Animals - Click an animal then Options->Help to find out more about each animal.
+
+
+WHEN DO ANIMALS MATE? HOW DO THEY GIVE MILK/WOOL ETC?
+Animals typically spend 15% of their lifetime as children with some exceptions. The lifetime of each animal varies, you can find typical age from Help menu. Eggs take a few days to hatch. Adult females can mate via the Mate option in the menu. Mammals will start giving milk after their first child. Some adult animals give wool periodically. You can also use the Options-> Help function for this information.
+
+
+STORAGE
+The storage racks and fridges are for storing harvested items for longer term. Animal feeders automatically take items from them.
+
+
+========================================================================
+
+The Quintonia Farm, Nature reserve, petting zoo and café use the “Satyr Farm” system which we have modified. It is an open source Farm system that contains fully functional plants, breedable animals, tools and food processing items and is easily expandable. More information can be found at https://opensimworld.com/farm/5

@@ -1,0 +1,37 @@
+ C A F É   I N F O R M A T I O N 
+ 
+This note-card is a brief introduction - more in-depth information can be found using the Info button on the HUD menu (see below).   Everything about the café also applies to the reserve, petting zoo and farm.
+
+
+WHAT IS THE HUD FOR?
+You can get the HUD from the welcome package in the welcome centre and also from the café.
+It is used for consuming food and drinks that you get from the café and other places - click the HUD to get the menu then click “Consume” to try to eat or drink anything that is near you.  You can also use it to sell produce for Quintonia points.   The four symbols show how hungry, thirsty, drunk and sick you are. You earn Quintonia points by having the HUD active when in Mintor as long as your hunger and thirst levels stay out of the red.
+
+CAFÉ
+You can select the background music in the cafe using the gramophone.
+
+To interact with the things you need to have joined and then activated the Quintonia group (you can do that for free at the welcome centre).
+
+NOTE: Don't try to put items into your inventory or take them off Mintor as they will stop working properly (you can put the fishing rod into your inventory but be aware that it always resets the fishing progress when you wear it again).
+
+
+THINGS TO DO
+
+Make food and drinks
+
+Top up the storage areas
+
+
+STORAGE
+The storage racks and fridge are for storing harvested items for longer term. Note that they are slightly different in the café than those found in the rest of Mintor and that the 'NPC' avatars don't ever top them up.
+ 
+Barrel storage - if you bring a product in a barrel (wine, beer etc) close to the storage area, when you click on it to make it stop following you, it will attempt to find an empty space on the storage rack. Once there and the product is ready, the drinks maker will take from there when you select to add the ingredient.
+
+Keg storage - same as barrel storage but for the smaller kegs (fruit juices, lemonade and cider).
+
+Tables - When you have a food  or drink product made in the café, clicking it to stop it following you will make the item try and find an empty table to sit on. Each table can only take one item.
+ 
+
+========================================================================
+
+The Quintonia Farm, Nature reserve, petting zoo and café use the “Satyr Farm” system which we have modified. It is an open source Farm system that contains fully functional plants, breedable animals, tools and food processing items and is easily expandable. More information can be found at https://opensimworld.com/farm/5

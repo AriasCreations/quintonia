@@ -1,0 +1,30 @@
+Quintonia packs - Basic information (More information in each pack)
+
+Pack 1 - Animals
+This pack contains an animal rezzer (and HUD) that creates "Quintonia style" animals. You can also upgrade existing animals.
+
+
+Pack 2 - HUD
+A HUD that interacts with the café and farm allowing you to eat, drink and manage the animals.
+
+
+Pack 3 - Café
+Extensions to the Satyr farm system to set up a café for your farm workers and visitors.
+
+
+Pack 4 - Farm items
+Modified farm items that work with the above packs.
+
+
+Quintonia Exchange
+A display board that allows you to buy and sell items with Quintonia points.
+
+
+
+More info and discussions at https://www.quintonia.net/forum/farming
+
+
+==  ==  ==  
+
+
+The extension packs available in Quintonia are modifications to the “Satyr Farm” system, which is an open source Farm system that contains fully functional plants, breedable animals, tools and food processing items. More information can be found at https://satyrfarm.github.io/

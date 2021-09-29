@@ -1,0 +1,66 @@
+###############################################
+# This is an example NPC Farmer configuration
+###############################################
+#
+# What last name to use (first name comes from the chosen NPC)
+LAST_NAME=Jones
+#
+# This text appears in the NPC's profile
+PROFILE=I help out around the farm, always on the go!  I tend to mostly talk to myself.
+#
+# How far to search for items from where the Farmer is standing.
+RADIUS=50
+#
+# Set to 0 to stop the running commentary by the NPC
+CHATTY=1
+#
+#  Item name |  List of trees/plants and frequency to Plant from separated by  ','
+TREE=SF Square Field|2|Grain|Corn
+TREE=SF Small Field|2|Potatoes|Carrots|Tomatoes
+TREE=SF Herb Garden|1|Basil|Chives|Coriander|Rosemary
+TREE=SF Big Tree|2|Apple Tree|Pear Tree
+TREE=SF Tree|1|Orange Tree|Lime Tree
+TREE=SF Physic Garden|1|Sunflowers
+Tree=SF Planter|1|Banana
+Tree=SF Flower Planter|1|Roses|Marigold|Flowers
+Tree=SF Marsh Field|1|Rice|Cranberries
+Tree=SF Vine|1|Peas|Grapes
+
+SF Horse Chestnut Tree
+SF Fig Tree
+SF Olive Tree
+SF Maple Tree
+SF Walnut Tree
+
+#
+# Feeders to check water level
+TREE=SF Feeder|1|
+TREE=SF Chicken Feeder|1|
+TREE=SF Pig Feeder|1|
+#
+# Auto rez on restart region
+AUTO_REZ=1
+#
+# If set to 1, farmer will make 'slop' as set out below
+ENABLE_COOKING=1
+#
+# Default 'slop' is made from water and potatoes,tomatoes,rice or apples, but can be changed here
+WATER_NAME=SF Water
+INGREDIENTS=SF Potatoes,SF Tomatoes,SF Rice,SF Apples
+# Name of 'slop' product
+COOKED_ITEM=SF Slop
+# Name of the cooking device, default is SatyrFarm Kitchen
+KITCHEN=SatyrFarm Kitchen
+# Where to store cooked product (default is SF Fridge)
+COOKED_STORE=SF Fridge
+#
+ENABLE_HARVESTING=1
+# Where to store harvested items (default is SF Storage Rack)
+HARVEST_STORE=SF Storage Rack
+# If some items don't go in main store you can list them and the alternative store
+SECONDARY_STORE=SF Herb Bench
+# These items will be stored in the secondary store
+SECONDARY_ITEMS=SF Basil,SF Chives,SF Coriander,SF Rosemary
+#
+# Name of the water well (default is SatyrFarm Well)
+WELL=SatyrFarm Well

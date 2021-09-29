@@ -1,0 +1,22 @@
+# English GB translation for power_lighting.lsl script
+#  8 March 2020
+@VER=1
+#
+TXT_ENERGY="Energy"
+TXT_ADD_KWH="Add kWh"
+TXT_CONNECT="Connect"
+TXT_DISCONNECT="Disconnect"
+TXT_CONNECTING="Connecting"
+TXT_STOP="Off"
+TXT_START="On"
+TXT_MODE="Mode"
+TXT_AUTO="Auto"
+TXT_MANUAL="Manual"
+TXT_LOW="Low energy"
+TXT_SELECT="Select"
+TXT_CLOSE="CLOSE"
+TXT_KWH_FOUND="Found kWh, emptying..."
+TXT_ERROR_NOT_FOUND="Error! kWh not found nearby! You must bring it near me!"
+TXT_BAD_PASSWORD="Bad password"
+TXT_ERROR_UPDATE="Error: unable to update - you are not my Owner"
+TXT_LANGUAGE="@"

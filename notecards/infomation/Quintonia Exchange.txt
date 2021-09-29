@@ -1,0 +1,52 @@
+QUINTONIA EXCHANGE  V4    –-- Buy and sell with Quintonia points! ---
+
+INTRODUCTION
+This system allows you to earn and use Quintonia points.  You can link you current avatar and then get points by selling items and using those points to purchase other items.
+
+This allows you to sell your excess items and then use the points to get those things you really need but don’t have!
+
+PS - You can also earn points using the free Quintonia/Satyr Farm HUD.
+
+FIRST STEPS
+First off we assume that you already have a working Satyr Farm set up.  If not, you can find out all the details on the official website at https://opensimworld.com/farm
+In order to use the Quintonia Exchange system you will need to have osGetNotecard allowed but you should already have that as it’s needed for the farm to work correctly.
+
+Okay, ready to get started….
+
+First thing to do is to create an account on the Quintonia website.  This is where you can monitor your points amongst other things.
+
+Go to https://quintonia.net/register and fill in the user registration.  You can leave the “Create an in-world Quintonia avatar” blank.
+You will receive an email with a link to activate your account.
+
+Next log in and from the User menu, go to the “In-world account” section
+(https://quintonia.net/account-worlds)
+You will find information on how to link your Quintonia account to your avatar.  Basically you either go to a terminal (in any region on the Quintonia grid) or use the 'Points' option on the HUD.  Enter in the code shown on the website.
+If you have any problems with that, please do use the forum and/or messaging systems to ask for help!
+
+SETTING UP
+So now you can take the Quintonia Exchange out of your inventory and place it somewhere on your farm.
+
+The system should start up and connect at which point you can click to get the menu.  As the owner you will see an additional 'Options' menu - this allows you to set who can use the exchange. Choose between everyone or people in the same group or only local residents.
+Note that whatever the setting, people still need to have a Quintonia account linked to their avatar to use it.
+
+You can edit the 'config' notecard to adjust the settings:
+
+      # Default position to rezz objects people buy
+        REZ_POSITION=<-1.5, 0.0, -1.0>
+      # Farm name to display on board
+        FARM_NAME=Quintonia Farm
+      # Time offset from UTC for time/date display
+        TIME_OFFSET=0
+      # Optional language notecard to use
+      LANG=en-GB
+
+You can also replace the image 'poster' with your own (recommended image size is 450 x 512).
+
+MULTILINGUAL SUPPORT
+This item supports the use of language notecards.  More information at https://quintonia.net/forum/languages/
+
+UPDATER-BOX SUPPORT
+When an update becomes available, this item can be updated via an 'updater box' rather than you having to delete it and replace with a new version
+
+
+*** Please do use the Quintonia website forum to give feedback ***

@@ -1,0 +1,19 @@
+EXPIRES=7
+
+#(Optional) When emptying the product, what color are the  particles rezzed?
+#FLOWCOLOR=<1.0, 1.0, 1.0>
+
+#(Optional)Some products require some days to mature before they  are ready to  be used (e.g. wine) . How many days to spend in maturation?
+#MATURATION=0
+
+#(Optional)Extra parameter that will be passed to the consumer of this
+#EXTRAPARAM=Hungry:-5|Thirsty:-5|Drunk:-5|Sick:-5
+
+#(Optional) If present and non-zero, will randomize the colour of prim at primlink specified
+#RANDOMIZE=3
+
+#(Optional) Name of target such as Table, Keg store etc
+TARGET=SF VASE
+
+#(Optional) Colour to use for float text. Default is white
+TEXTCOLOR="ZERO_VECTOR"

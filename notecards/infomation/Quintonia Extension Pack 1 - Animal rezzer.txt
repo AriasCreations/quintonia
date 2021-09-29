@@ -1,0 +1,41 @@
+Quintonia Extension Pack 1 
+
+- Animal rezzer - Quintonia modified version
+
+Included is the animal rezzer that you can place on the ground to use.  
+There is also a HUD version that you can wear so you can move around with it and rez animals in your current location - it is advisable to stand still until the upgrade process is complete if using the HUD.
+
+You can rez new animals and also update existing animals.
+If at any time you want to go back to the standard animals you can use the normal Satyr Farm animal rezzer's update function to restore them back to "factory settings"
+
+ NOTE: You can only update animals that have you set as the owner.
+
+The animals are different from the standard Satyr Farm animals in the following ways:
+
+• Help button
+This now shows on the first screen rather than under the Options menu
+
+• Float text
+There is an additional option of not showing any float text above an animal. You can select from the Options menu between Long, Short or None
+ 
+• Walk mode
+You can set how the animal moves. This is selected from the Options menu but can also be configured via the "an_config" configuration notecard ( set as    SURFACE=flat    or    SURFACE=ground    or    SURFACE=water )
+The choices are:
+'flat' which has the animal stay at the level it was created at. This is the mode to use if you have your animals higher than ground level, for instance on a platform.
+'ground' which has the animal walk at ground level, going up and down any hills and valleys.  
+'water' which will have the animal 'float' at water level. This is great for ducks! 
+
+• Chatty mode
+Normally animals chat, saying if they are hungry, thirsty etc.  You can turn off chat so the animals don't say anything. Note that if you turn off Chatty mode and also set the float text to none, you won't see if they need anything or have anything to give - this makes them a lot like real animals!   If not in chatty mode, you only get animal noises during the day (bahh, moo etc!)
+
+• Colour coded text
+The float text will show as Green when the animal is happy, red when it is unhappy and white the rest of the time.
+
+• Reporting
+These animals work with the Quintonia-Satyr Farm HUD to help you get a tally of numbers and other information.
+
+More info and discussions at https://www.quintonia.net/forum/farming
+
+==  ==  ==  
+
+The extension packs available in Quintonia are modifications to the “Satyr Farm” system, which is an open source Farm system that contains fully functional plants, breedable animals, tools and food processing items. More information can be found at https://satyrfarm.github.io/

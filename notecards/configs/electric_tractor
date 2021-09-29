@@ -1,0 +1,37 @@
+# SF Electric Tractor
+#
+# Set to 1 to have vehicle return home when not in use
+AUTORETURN=0
+#
+# Volume for effects from 0 to 10
+VOLUME=8
+#
+# Default language
+LANG=en-GB
+#
+# CAR  or BOAT  or  PLANE
+V_TYPE=CAR
+#
+VEHICLE_BUOYANCY=1.0
+#
+# Prim numbers for any rotating wheels
+FL=14
+FR=15
+BL=16
+BR=17
+#
+# Optional rotation in case the wheels do not spin across the X axis
+WHEEL_ROTATION=<0.0, 0.0, PI/2>
+#
+# Prim number for particle effects
+FX_PRIM=12
+#
+SIT_TARGET=<-1.3, 0.0, 1.1>
+#
+SIT_ROT=<0.0, 0.0, 0.0>
+#
+FWD_POWER=6.0
+REV_POWER=-3.0
+#
+# Less is sharper range 0 to 10
+TURN_RATION=2.0

@@ -1,0 +1,26 @@
+#Names of supported plants, separated with comma (No SF prefix)
+PLANTLIST=Orange Tree,Apple Tree,Cherry Tree,Lemon Tree
+#
+#Names of products each plant rezzes (With SF prefix)
+PRODUCTLIST=SF Oranges,SF Apples,SF Cherries,SF Lemons
+#
+#Days in the growing period. The plant will spend LIFEDAYS/3 time in the New phase, so total days to become ripe is LIFEDAYS*1.3
+LIFEDAYS=3
+#
+#Whether this plant gives wood. If yes, the SF Wood object must be in the contents
+HAS_WOOD=1
+#
+#How many times to water the plant during the growing phase
+WATER_TIMES=4
+#
+#How many times to give wood during the  growing phase
+WOOD_TIMES=1
+
+# Where to rez produce
+REZ_POSITION
+
+AUTOREPLANT
+
+RESET_ON_REZ
+
+

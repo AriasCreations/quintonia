@@ -1,0 +1,138 @@
+###################################################################
+# CONFIGURATION VALUES FOR AN_CONFIG NOTECARD
+#   Note all items are optional.  The default values here
+#   will be used for items not included in the an_config notecard
+###################################################################
+#
+# The name given to new animals such as Cow, Sheep etc
+NAME=Animal
+#
+# Word used by animal when 'speaking'
+CRY=Ah
+#
+# If set to 0 during the day the animal will just play sounds but won't speak (I'm thirsty etc) and during the night it won't make any sounds at all.
+CHATTY=1
+#
+# What surface the animal follows. Can be flat, ground or water
+SURFACE=flat
+#
+# How far (in m) the animal will wander from its home position
+RADIUS=10
+#
+# If set to 1, animal won't move, although the menu allows you to start it moving again
+IMMOBILE=0
+#
+# Set to 0 to have another script handle touch
+TOUCH_ACTIVE=1
+#
+# Where the animal gets its food from
+FEEDER=SF Animal Feeder
+#
+# How often (in seconds) animals need to feed (5900 is approx 1.64 hours)
+FEEDTIME=5900
+#
+# What percent should the animal take each feed
+FEEDAMOUNT=1.0
+#
+# How often (in seconds) animals need to drink (5000 is approx 1.4 hours)
+WATERTIME=5000.0
+#
+# What percent should the animal take each drink
+WATERAMOUNT=1.0
+#
+# 1 if reproduces by egg, otherwise 0 means animal gets pregnant
+LAYS_EGG=0
+#
+# How long (in seconds) for egg to hatch (86400 is 24 hours)
+EGG_TIME=86400
+#
+# How long (in seconds) pregnancy lasts (432000s is 5 days)
+PREGNANT_TIME=432000
+#
+# Does adult female give a product linked with giving birth/laying an egg.  Set to 1 if true, otherwise set to 0
+HASMILK=1
+#
+# If above is set to 1, time in seconds between giving each 'milk' product. First product is given straight after giving birth/laying an egg   (99000 is 27.5 hours)
+MILKTIME=99000
+#
+# Name of item to give as 'milk' object (must be in the animals inventory)
+MILK_OBJECT=SF Milk
+#
+# How often (in seconds) after laying an egg before the animal can be mated again (86400 is 24 hours)
+MATE_INTERVAL=86400
+#
+# Set to 1 if adult animals give wool product (wool, feathers etc)
+HASWOOL=0
+#
+# If above is set to 1, time in seconds between giving each 'wool' product. (345600 is 4 days)
+WOOLTIME=345600
+#
+# Product to give as 'wool' item  (must be in the animals inventory)
+WOOL_OBJECT=SF Wool
+#
+# Set to 1 if adult animals give manure product
+HASMANURE=0
+#
+# [version 5.1 onwards. Version before it is fixed at every 48 hours]
+# If above is set to 1, time in seconds between giving each 'manure' product. (172800 is 48 hours)
+MANURETIME=172800
+#
+# [version 5.1 onwards. Version before it is fixed at SF Manure]
+# Product to give as 'manure' item  (must be in the animals inventory)
+MANURE_OBJECT=SF Manure
+#
+# If 1, animal will rez poo when ready, if 0 then farmer needs to collect it.
+AN_AUTO_POO=0
+#
+# Average life expectancy in days
+LIFEDAYS=30
+#
+# Product to give as 'skin' item when animal dies (must be in the animals inventory)
+# If nothing to be given use  SKIN_OBJECT=
+SKIN_OBJECT=SF Skin
+#
+# Product to give as 'meat' item when animal dies (must be in the animals inventory)
+# If nothing to be given use  MEAT_OBJECT=
+MEAT_OBJECT=SF Meat
+
+# How much to move animal in x direction for each step
+STEP_SIZE=0.4
+
+# For animals that have multiple body textures, set to 1 (named goat, goat12, goat2 etc)
+HASGENES=0
+#
+# If set to 1, allows you to specify different textures for each prim in the SKINABLE_PRIMS section (see https://quintonia.net/forum/development/35-genetics-part-2)
+MULTI_SKIN=0
+#
+# which prims use the 'goat' textures if above is 1
+SKINABLE_PRIMS=2,3
+#
+# Which prims to show only for child animal
+CHILD_PRIMS=
+#
+# Which prims to show only for adult male
+ADULT_MALE_PRIMS=
+#
+# Which prims to show only for adult female
+ADULT_FEMALE_PRIMS=
+#
+#  How much of life to spend as child   LIFEDAYS x CHILDHOOD_RATIO
+CHILDHOOD_RATIO=0.15
+#
+# Initial scale as child
+CHILD_SCALE=0.5
+#
+# Dont let the child grow beyond this scale
+CHILD_MAX_SCALE=1.0
+#
+# To make male animals bigger on average than females use numbers >1.0, or use numbers <1.0 for larger females
+MALE_SCALE=1.05;
+#
+# Total number of adult sounds (adult1, adult2 etc)
+TOTAL_ADULTSOUNDS=4
+#
+# Total number of baby sounds (baby1, baby2 etc)
+TOTAL_BABYSOUNDS=2
+#
+# Default language to use on menus
+LANG=en-GB

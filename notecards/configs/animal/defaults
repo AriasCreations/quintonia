@@ -1,0 +1,47 @@
+// Set default config values - these can be overwritten by settings in 'an_config' notecard
+
+string  AN_NAME   = "Animal";           // Name of animal
+string  AN_BAAH   = "Ah";               // Word to use when 'speaking'
+integer CHATTY    = 0;                  // Assume chatty unless config NC has it set as 0 (false)
+
+string  SURFACE   = "ground";           // Read from config but assume flat if not ground or water
+integer IMMOBILE  = 0;                  // Assume animal will move about
+integer RADIUS    = 10;                 // Assume 10m walk radius
+
+integer AN_HASMILK = 0;                 // 1 if gives milk
+integer MILKTIME = 86400;               // 24 hours
+string  MILK_OBJECT = "SF Milk";        // Object to give as milk
+
+integer AN_HASWOOL = 0;                 // 1 if gives wool
+integer WOOLTIME = 345600;              // 96 hours
+string  WOOL_OBJECT = "SF Wool";        // Could also be feathers, crystals etc!
+
+integer AN_HASMANURE = 0;               // 1 if gives manure
+integer MANURETIME = 172800;            // 48 hours
+
+integer LAYS_EGG        = 0;            // Reproduces with egg
+integer EGG_TIME        = 86400;        // Time until hatching (24 hours)
+integer PREGNANT_TIME   = 432000;       // 120 hours (5 days)
+integer MATE_INTERVAL   = 86400;        // how often to be mateable (24 hours)
+
+integer AN_HASGENES     = 0;            // 1 if animal passes genes through mating
+float   CHILD_SCALE     = 0.5;          // Initial scale as child
+float   CHILD_MAX_SCALE = 1.0;          // Dont let the child grow beyond this scale
+float   MALE_SCALE      = 1.05;         //
+float   STEP_SIZE       = 0.4;          //
+float   CHILDHOOD_RATIO = 0.15;         // How much of life to spend as child
+integer TOTAL_ADULTSOUNDS = 4;          // How many sounds to use (adult1, adult2 etc)
+integer TOTAL_BABYSOUNDS = 2;           // How many sounds to use (baby1, baby2 etc)
+list    ADULT_MALE_PRIMS   = [];        //
+list    ADULT_FEMALE_PRIMS = [];        // link numbers - Both sexes
+list    ADULT_RANDOM_PRIMS = [];        // show randomly
+list    CHILD_PRIMS        = [];        // children only
+integer LIFETIME = 2592000;             // 30 days
+string  MEAT_OBJECT     = "SF Meat";    // 'Meat' object to rez on death
+string  SKIN_OBJECT     = "SF Skin";    // 'Skin' object to rez on death
+
+float   WATERTIME = 5000.0;             // How often to drink (~1.4 hours)
+float   FEEDAMOUNT = 1.0;               // How many food units to take on eating
+float   FEEDTIME  = 5900.0;             // How often to eat (~1.6 hours)
+float   WATERAMOUNT = 1.0;              // How many water units to take on drinking
+string  AN_FEEDER = "SF Animal Feeder"; // Where to look for food and water

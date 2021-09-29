@@ -1,0 +1,80 @@
+== WIND POWER EXTENSION FOR SATYR FARM ==
+The items in this package will enable you to add generation of electricity using wind (and leg!) power. Energy is stored and controlled and used by items such as electric vehicles and also as an alternative to wood in the oven.  You can add 'SF kWh' as an ingredient in any item.
+
+OVERVIEW
+The system consists of "generators" and "consumers" with one central control box.  The system covers an entire region so you can place items anywhere and they connect to the region grid.  You only need one control box, but you can put out as many wind turbines (generators) as you need and as many charger units, outlets etc (consumers) as you want.
+
+MULTILINGUAL SUPPORT
+All items in this package support the use of language notecards.  More information at https://quintonia.net/forum/languages/
+
+UPDATER-BOX SUPPORT
+When an update becomes available, all items support being updated via an 'updater box' rather than you having to delete it and replace with a new version
+
+SETTING UP...
+Note that all the values in the notecards will get you up and working but you can also adjust them to your particular needs.
+
+(1) First you need to put out the 'SF Power Controller'
+This has a range of the entire region so you only need one per region. It can be placed anywhere in that region.
+It takes in energy produced by Wind Turbines and sends out to charging stations and electrical outlets. It can also rez energy objects (kWh) if touched.
+It's a good strategy to let the system run for a while to build up energy reserves before you put out items that need energy. If you can't wait you can always edit the config notecard and set an initial energy level Example values shown below
+
+  # Any line that starts with # is a comment
+  #
+  # The initial level in kWh that you start with
+    INITIAL_LEVEL=25
+  # How many days to pass before reducing the stored energy by 'one part'. Use 0 for no drop
+    DROP_TIME=0
+  #  The amount of energy used for each request/addition
+    ONE_PART=1
+  # Radius in m when looking for SF kWh item
+    SENSOR_DISTANCE=10
+  # Offset for where to rez SF kWh item
+    REZ_POSITION=<-1.0, 0.0, 0.0>
+  # Maximum storage capacity in kWh for the region grid
+    MAX_ENERGY=2000
+  # Cut off point below which touching the controller won't show the 'Give kWh' option
+    MIN_LEVEL=100
+  # Language to use for the system (requires matching notecard, see 'multilingual support' above)
+    LANG=en-GB
+
+
+(2) Next put out one or more SF Wind Turbine
+This generates energy and sends it to the Power Controller for the region. The output changes with the wind - more wind gives more output.
+You can have as many wind turbines as you need to produce enough power for the requirements of your region.  You may find different locations average different amounts - experiment to find the best spots!  To help identify them,  the controller shows the description for each one (Edit, Description)
+
+(3) When you have some stored energy reserves you can put out one or more  SF Charger
+When touched, this scans for things to charge. You can configure it via the notecard to only scan for things with particular names:
+  # Radius in m to look for items
+  SENSOR_DISTANCE=6
+  # Names of items to look for.  If you remove this line the charger will list everything it finds nearby
+  NAMES=SF Vehicle|SF Electric Car|SF Electric Swan
+  # Language to use for the system (requires matching notecard, see 'multilingual support' above)
+    LANG=en-GB
+
+(4) SF Electric Swan - This is an electric vehicle to use as a fun way to get around your farm!  Use the pgUp and pgDown keys to shift gear
+By default, it will auto-return to it's original rez position about 5 minutes after being left empty. If you wish to change the home location, just reset scripts in the new position.
+You can also turn off auto-return by changing the config notecard:
+      AUTORETURN=1    // If 1 will return home approx 5 minutes after stop being used
+      # Language to use for the system (requires matching notecard, see 'multilingual support' above)
+      LANG=en-GB
+
+(5) SF Power outlet - When touched these give one 'SF kWh' item.  This can then be used to give power to things such as vehicles, the café oven etc.  If you have a Café you may want to put one there for the oven!  (updated recipe notecard in this package)
+
+(6) SF Battery Storage - This is a storage unit for SF kWh
+
+-- HOW TO CONVERT YOUR WATER SYSTEM --
+The SF Water Tower supplied with is package can operate in the 'traditional' way i.e. with one 'SF Wind Pump' feeding one water tower (note that you need to keep them named 'SF Wind Tower' for that to work)
+However it can also work with the new region wide electric water pump.
+
+SF Electric Pump
+You only need one pump as it covers and entire region. it will supply water on demand to the new Water Tower's as long as there is enough energy stored.
+
+SF Water Tower (electric version) -  This will request the pump to start when the water level drops below around 40%. If there isn't enough energy it will wait and try again later. You can have as many water towers as you need all fed from the one pump.
+The config notecard settings are:
+    # Offset for where to rez SF Water item
+      REZ_POSITION=<0.0, 0.0, -1.0>
+    # Language to use for the system (requires matching notecard, see 'multilingual support' above)
+     LANG=en-GB
+
+
+An electricity grid for regions is a new feature and so may well have a few bugs! Plus you may have suggestions for things to add or change.  Please do use the forums at https://quintonia.net/forum/farming

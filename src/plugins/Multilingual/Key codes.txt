@@ -1,0 +1,44 @@
+KEY CODES FOR MULTILINGUAL NOTECARDS
+ Substitute 'en-GB' with code for language
+
+  en-GB-langA1   ANIMAL
+  en-GB-langA2   ANIMAL_PET_CREATOR
+  en-GB-langB1   ANIMAL-BABY
+  en-GB-langB2   HUD-BABY
+  en-GB-langC1   CHICKEN-COOP
+  en-GB-langC2   CONVERTER
+  en-GB-langC3   POWER_CHARGING_STATION
+  en-GB-langC4   POWER_CONTROLLER
+  en-GB-langE1   EXCHANGE
+  en-GB-langF1   FEEDER
+  en-GB-langF2   FIREPIT
+  en-GB-langF3   FISHING ROD
+  en-GB-langF4   FISHING ROD GIVER
+  en-GB-langG1   GRASS_FEEDER
+  en-GB-langG2   POWER_GENERATOR
+  en-GB-langH1   HUD (SatyrFarm)
+  en-GB-langH2   HUD (Map)
+  en-GB-langI1   INFO_TERMINAL
+  en-GB-langI2   INSECTS
+  en-GB-langL1   LIGHTING
+  en-GB-langM1   MACHINE
+  en-GB-langM2   POWER_MINE
+  en-GB-langN1   NPC FARMER
+  en-GB-langP1   PLANT
+  en-GB-langP2   PRODUCT
+  en-GB-langP3   POWER_ELECTRICAL_OUTLET
+  en-GB-langQ1   QUINTONIA_TERMINAL
+  en-GB-langR1   REZZER
+  en-GB-langR2   RESOURCE_MANAGER
+  en-GB-langS1   STORAGE
+  en-GB-langS2   SURFACE
+  en-GB-langS3   SOLAR_PANEL
+  en-GB-langS4   STORAGE_NETWORKED
+  en-GB-langT1   ELECTRIC TREADMILL
+  en-GB-langT2   ELECTRIC_TURBINE
+  en-GB-langU1   UTILITY_STORAGE_XFER
+  en-GB-langV1   VEHICLE
+  en-GB-langW1   POWER_WATER_PUMP
+  en-GB-langW2   WELL_STORAGE
+  en-GB-langW3   WELL
+  en-GB-langW4   WATER_TOWER

@@ -1,0 +1,36 @@
+PRODUCTS 
+0 P 			Always P (for product)
+
+
+TREES & PLANTS
+0 T 			Always T (for Tree but also plants so 'P' used by products)
+1 Plant name 	SF Peppers etc
+2 Status 		New, Growing or Ripe
+3 Status left 	Time in Seconds before ripe
+4 Water 		% water (0 is none, 100 is fully watered)
+5 wood 			% towards having wood ready
+6 Plant 		Name of crop produced e.g. Peppers
+7 Auto water 	
+
+
+T;SF Peppers;Growing;30000;86;100;Peppers;-14242540;0
+autoWater = llList2Integer(desc, 8);
+
+
+
+
+
+ANIMAL CONFIG STORED IN DESCRIPTION
+
+ 0 A 			Always A (for animal)
+ 1 sex 			0 = Male    1 = Female
+ 2 water 		percent
+ 3 food 		percent 
+ 4 createdTs	timestamp (llGetUnixTime) for animal creation
+ 5 				(string)chan(llGetKey())
+ 6 geneA		1, 2 or 3
+ 7 geneB		1, 2 or 3
+ 8 fatherGene	0, 3 or 4 ????
+ 9 pregnantTs	0 for not timestamp for start of pregnancy  
+10 name 		Animal name 
+11 Radius 		Optional - Walking radius if different from default 
