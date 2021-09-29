@@ -4,4 +4,4 @@ SatyrFarm is a farming and breedables system for opensim and this fork adds to a
 
 Website: https://quintonia.net
 
-You can find it in-world at hg.osgrid.org:80:mintor
+You can find it in-world at worlds.quintonia.net:8002:mintor
