@@ -12,7 +12,7 @@ string TXT_AUTOHARVESTING_ON="Auto harvesting is On";
 string languageCode = "en-GB";          //  LANG=en-GB
 string SUFFIX = "P1";
 
-integer autoHarvest;
+integer autoHarvest=TRUE;
 
 loadLanguage(string langCode)
 {
