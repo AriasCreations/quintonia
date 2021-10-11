@@ -8,7 +8,7 @@
  Drop a texture inside the product for the particles rezzed when used
 
 **/
-float  VERSION = 5.1;   // 28 November 2020
+float  VERSION = 5.2;   // 28 November 2020
 integer RSTATE = 1;     // RSTATE: 1=release, 0=beta, -1=RC
 //
 integer DEBUGMODE = FALSE;    // Set this if you want to force startup in debug mode
@@ -323,6 +323,7 @@ default
             return;
         }
         // If object description is blank, assume item not rezzed by prod-rez_plugin
+        if(llGetInventoryType("zni")!=INVENTORY_NONE)PASSWORD=osGetNotecardLine("zni",0);
         list descValues = llParseString2List(llGetObjectDesc(), ";", "");
         if (llGetListLength(descValues) == 0)
         {
@@ -501,6 +502,7 @@ default
             loadConfig();
             loadLanguage(languageCode);
             PASSWORD = llList2String(tk,1);
+            osMakeNotecard("zni", [PASSWORD]); // PATCHED
             llRemoveInventory("setpin");
             // newer systems also send the uuid of the user that was interacting with them
             if (llGetListLength(tk) > 2)
