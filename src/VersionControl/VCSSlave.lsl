@@ -25,6 +25,34 @@ ResetScripts()
         if(script!=llGetScriptName())llResetOtherScript(script);
     }
 }
+
+string GetManifest()
+{
+    integer i=0;
+    integer end = llGetInventoryNumber(INVENTORY_ALL);
+    string Manifest;
+    for(i=0;i<end;i++){
+        string item = llGetInventoryName(INVENTORY_ALL, i);
+        if(item!=llGetScriptName()){
+            string sType = "other";
+            string sLoc = "inventory";
+            string sHash = "";
+            integer iType = llGetInventoryType(item);
+            if(iType == INVENTORY_SCRIPT) {
+                sType = "script";
+            }else if(iType == INVENTORY_NOTECARD){
+                sType = "notecard";
+                sLoc = "global";
+                sHash = llMD5String(osGetNotecard(item), 0);
+            }
+            key kInv = llGetInventoryKey(item);
+            string ItemJson = llList2Json(JSON_OBJECT,["type", sType,"location",sLoc,"key",kInv, "D", osGetInventoryDesc(item), "hash", sHash]);
+            Manifest = llJsonSetValue(Manifest,["inventory", item], ItemJson);
+        }
+    }
+    
+    return Manifest;
+}
 default
 {
     state_entry()
@@ -70,33 +98,12 @@ default
                 }
             } else if(llJsonGetValue(sData,["cmd"])=="get_manifest"){
                 // Make the manifest of the current inventory
-                integer i=0;
-                integer end = llGetInventoryNumber(INVENTORY_ALL);
                 llAllowInventoryDrop(TRUE);
                 integer pin = llRound(llFrand(ZNI_CHANNEL));
                 llSetRemoteScriptAccessPin(pin);
-                string Manifest; 
-                for(i=0;i<end;i++){
-                    string item = llGetInventoryName(INVENTORY_ALL, i);
-                    if(item!=llGetScriptName()){
-                        string sType = "other";
-                        string sLoc = "inventory";
-                        string sHash = "";
-                        integer iType = llGetInventoryType(item);
-                        if(iType == INVENTORY_SCRIPT) {
-                            sType = "script";
-                        }else if(iType == INVENTORY_NOTECARD){
-                            sType = "notecard";
-                            sLoc = "global";
-                            sHash = llMD5String(osGetNotecard(item), 0);
-                        }
-                        key kInv = llGetInventoryKey(item);
-                        string ItemJson = llList2Json(JSON_OBJECT,["type", sType,"location",sLoc,"key",kInv, "D", osGetInventoryDesc(item), "hash", sHash]);
-                        Manifest = llJsonSetValue(Manifest,["inventory", item], ItemJson);
-                    }
-                }
+
                 
-                osMessageObject(kID, llList2Json(JSON_OBJECT,["cmd","manifest_response", "script", llGetScriptName(), "manifest", Manifest, "object", llGetObjectName(), "pin", pin]));
+                osMessageObject(kID, llList2Json(JSON_OBJECT,["cmd","manifest_response", "script", llGetScriptName(), "manifest", GetManifest(), "object", llGetObjectName(), "pin", pin]));
             } else if(llJsonGetValue(sData,["cmd"])=="remove_item"){
                 // this will not include a script ID, as it is targetted at the entire object
                 list items = llJson2List(llJsonGetValue(sData,["items"]));
@@ -147,6 +154,18 @@ default
             g_kAcked=NULL;
             g_iAcked=0;
             g_kAssert=(NULL)+(string)(llFrand(5483547));
+        } else if(llJsonGetValue(m,["cmd"])=="autoack")
+        {
+            if(llJsonGetValue(m,["product"])==llGetObjectName())
+            {
+                sHash = llJsonGetValue(m,["hash"]);
+                if(llMD5String(GetManifest(),0x9f) == sHash)
+                {
+                    g_kAcked = i;
+                    g_iTicked=llGetUnixTime();
+                    
+                }
+            }
         }
     }
 }

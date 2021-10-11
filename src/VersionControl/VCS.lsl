@@ -117,18 +117,24 @@ default
         state VCSOff;
     }
 }
+state VCSWaitDrop /// The purpose of this state is to try to let the engine drop all the other messages occuring in the channel
+{
+    state_entry()
+    {
+        llSleep(10);
+        state VCSOn;
+    }
+}
 state VCSOn
 {
     state_entry(){
         g_kLock=NULL;
-        llSay(0, "VCS now getting ready...please wait");
         stopOthers();
         //llRegionSay(ZNI_CHANNEL, llList2Json(JSON_OBJECT, ["cmd","clearack"])); // Temporarily, do NOT clear this
         llListen(ZNI_CHANNEL, "", "", "");
         llRegionSay(ZNI_CHANNEL, llList2Json(JSON_OBJECT, ["cmd","versions"]));
         llSetTimerEvent(60);
         llSetText("Version Control Server\n[ZNI]\n \nV"+osGetInventoryDesc(llGetScriptName()),<1,0,0>,1);
-        llSay(0, "VCS is now ready");
         
         llListen(0, "", "", "");
     }
@@ -350,7 +356,9 @@ state VCSOn
                         osMessageObject(kID, llList2Json(JSON_OBJECT, ["cmd","done"]));
                         llSleep(1);
                         g_kLock = NULL;
-                        llRegionSay(ZNI_CHANNEL, llList2Json(JSON_OBJECT, ["cmd","versions"]));
+                        llRegionSay(ZNI_CHANNEL, llList2Json(JSON_OBJECT, ["cmd", "autoack", "product", object, "hash", llMD5String(objectManifest, 0x9f)]));
+                        llSleep(1);
+                        state VCSWaitDrop;
                     }
                 }else{
                     llSay(0, "ERROR : NO MANIFEST FOUND FOR "+object+"\n[ Refusing to run updates ]");
@@ -365,10 +373,11 @@ state VCSOff{
         stopOthers();
         llSetTexture(TEXTURE_BLANK, ALL_SIDES);
         //llRegionSay(ZNI_CHANNEL, llList2Json(JSON_OBJECT,["cmd","setack","script","VCSSlave[ZNI]"]));
-        //llRegionSay(ZNI_CHANNEL, llList2Json(JSON_OBJECT, ["cmd","clearack"]));
+        llRegionSay(ZNI_CHANNEL, llList2Json(JSON_OBJECT, ["cmd","clearack"]));
         llSetText("Version Control Server\n[ZNI]\nTotal Inventory : "+(string)llGetInventoryNumber(INVENTORY_ALL)+"\n \n* OFF *", <1,1,1>,1);
     }
     touch_start(integer t){
+        llSay(0, "VCS now getting ready...please wait");
         state VCSOn;
     }
     changed(integer i){
