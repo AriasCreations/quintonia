@@ -103,7 +103,7 @@ default
                 llSetRemoteScriptAccessPin(pin);
 
                 
-                osMessageObject(kID, llList2Json(JSON_OBJECT,["cmd","manifest_response", "script", llGetScriptName(), "manifest", GetManifest(), "object", llGetObjectName(), "pin", pin]));
+                osMessageObject(kID, llList2Json(JSON_OBJECT,["cmd","manifest_response", "script", llGetScriptName(), "manifest", llStringToBase64(GetManifest()), "object", llGetObjectName(), "pin", pin]));
             } else if(llJsonGetValue(sData,["cmd"])=="remove_item"){
                 // this will not include a script ID, as it is targetted at the entire object
                 list items = llJson2List(llJsonGetValue(sData,["items"]));

@@ -277,7 +277,7 @@ state VCSOn
                 integer iInstallPin = (integer)llJsonGetValue(sData,["pin"]);
                 @returnCodeToL138;
                 if(llGetInventoryType(object+".Manifest") != INVENTORY_NONE){
-                    string objectManifest= llJsonGetValue(sData,["manifest"]);
+                    string objectManifest= llBase64ToString(llJsonGetValue(sData,["manifest"]));
                     string currentManifest = osGetNotecard(object+".Manifest");
                     
                     if(object != llJsonGetValue(currentManifest,["object"])){
@@ -365,8 +365,12 @@ state VCSOn
                         osMessageObject(kID, llList2Json(JSON_OBJECT, ["cmd","done"]));
                         llSleep(1);
                         g_kLock = NULL;
+                        llSay(0, "Object Manifest : "+objectManifest);
+                        llSay(0, "Hash : "+llMD5String(objectManifest,0x9f));
+                        llSay(0, "Manifest Length : "+(string)llStringLength(objectManifest));
                         llRegionSay(ZNI_CHANNEL, llList2Json(JSON_OBJECT, ["cmd", "autoack", "product", object, "hash", llMD5String(objectManifest, 0x9f)]));
                         llSleep(1);
+                        
                         state VCSWaitDrop;
                     }
                 }else{
