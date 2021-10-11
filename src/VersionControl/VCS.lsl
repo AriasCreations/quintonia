@@ -114,6 +114,10 @@ default
 {
     state_entry()
     {
+        if(llGetObjectDesc()=="KAUTO"){
+            llSetObjectDesc("");
+            state VCSOn;
+        }
         state VCSOff;
     }
 }
@@ -121,6 +125,10 @@ state VCSWaitDrop /// The purpose of this state is to try to let the engine drop
 {
     state_entry()
     {
+        if(llGetFreeMemory()<=200000){
+            llSetObjectDesc("KAUTO");
+            llResetScript();
+        }
         llSleep(10);
         state VCSOn;
     }
@@ -134,7 +142,7 @@ state VCSOn
         llListen(ZNI_CHANNEL, "", "", "");
         llRegionSay(ZNI_CHANNEL, llList2Json(JSON_OBJECT, ["cmd","versions"]));
         llSetTimerEvent(60);
-        llSetText("Version Control Server\n[ZNI]\n \nV"+osGetInventoryDesc(llGetScriptName()),<1,0,0>,1);
+        llSetText("Version Control Server\n[ZNI]\n \nV"+osGetInventoryDesc(llGetScriptName())+"\n \n"+(string)llGetFreeMemory(),<1,0,0>,1);
         
         llListen(0, "", "", "");
     }
@@ -353,6 +361,7 @@ state VCSOn
                             
                         }
                         llSay(0, "DONE WITH OBJECT : "+object);
+                        llSay(0, "FMEM: "+(string)llGetFreeMemory());
                         osMessageObject(kID, llList2Json(JSON_OBJECT, ["cmd","done"]));
                         llSleep(1);
                         g_kLock = NULL;
@@ -373,10 +382,17 @@ state VCSOff{
         stopOthers();
         llSetTexture(TEXTURE_BLANK, ALL_SIDES);
         //llRegionSay(ZNI_CHANNEL, llList2Json(JSON_OBJECT,["cmd","setack","script","VCSSlave[ZNI]"]));
-        llRegionSay(ZNI_CHANNEL, llList2Json(JSON_OBJECT, ["cmd","clearack"]));
-        llSetText("Version Control Server\n[ZNI]\nTotal Inventory : "+(string)llGetInventoryNumber(INVENTORY_ALL)+"\n \n* OFF *", <1,1,1>,1);
+        //llRegionSay(ZNI_CHANNEL, llList2Json(JSON_OBJECT, ["cmd","clearack"]));
+        llSetText("Version Control Server\n[ZNI]\nTotal Inventory : "+(string)llGetInventoryNumber(INVENTORY_ALL)+"\n \n* OFF *\n"+(string)llGetFreeMemory(), <1,1,1>,1);
     }
     touch_start(integer t){
+        llResetTime();
+    }
+    touch_end(integer t){
+        if(llGetTime()>=5.0){
+            llSay(0, "Telling all VCSSlaves to clear acknowledgement");
+            llRegionSay(ZNI_CHANNEL, llList2Json(JSON_OBJECT, ["cmd","clearack"]));
+        }
         llSay(0, "VCS now getting ready...please wait");
         state VCSOn;
     }
