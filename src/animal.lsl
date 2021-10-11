@@ -17,8 +17,8 @@
 // Mods by Cnayl Rainbow, hg.osgrid.org:80:Aquino
 //
 // NOTE: Versions before 4.1 can't be easily upgraded to version 5 due to all sorts of hardware differences
-float    VERSION = 5.6;    // 5.6-RC-1214   (14 December 2020)
-integer  RSTATE  = -1;     // RSTATE = 1 for release, 0 for beta, -1 for Release candidate
+float    VERSION = 5.7;    // 5.6-RC-1214   (14 December 2020)
+integer  RSTATE  = 0;     // RSTATE = 1 for release, 0 for beta, -1 for Release candidate
 //
 integer DEBUGMODE = FALSE;
 debug(string text)
@@ -544,7 +544,40 @@ saveState()
         if (isHuman == FALSE) llSetObjectDesc(codedDesc);
     }
 }
-
+APPLYPARAMS(list desc)
+{
+    if (llList2Integer(desc,1) == 1) sex = "Female"; else sex = "Male";
+    water = llList2Integer(desc, 2);
+    food  = llList2Integer(desc, 3);
+    epoch = 1; // Assume child
+    createdTs = llList2Integer(desc, 4);
+    geneA = llList2Integer(desc, 6);
+    geneB = llList2Integer(desc, 7);
+    fatherGene = llList2Integer(desc, 8);
+    pregnantTs = llList2Integer(desc, 9);
+    name = llList2String(desc, 10);
+    // optional newer items so see if there is a version number stored next
+    if (llList2Integer(desc, 11) != 0)
+    {
+        RADIUS  = llList2Integer(desc, 12);
+        SURFACE = llList2String(desc, 13);
+        CHATTY  = llList2Integer(desc, 14);
+        languageCode = llList2String(desc, 15);
+        if (llList2Vector(desc, 19) != ZERO_VECTOR)
+        {
+            givenBirth = llList2Integer(desc, 16);
+            epoch = llList2Integer(desc, 17);
+            labelType = llList2Integer(desc, 18);
+            initpos = llList2Vector(desc, 19);
+            scaleFactor = llList2Float(desc, 20);
+            AN_AUTO_POO = llList2Integer(desc, 21);
+            savedRot = llList2Rot(desc, 22);
+            savedPos = llList2Vector(desc, 23);
+            SLEEP_MODE = llList2Integer(desc, 24);
+            feedPet = llList2Integer(desc, 25);
+        }
+    }
+}
 loadState()
 {
     // Do not attempt to load notecard if we are in process of doing a 'restore'
@@ -568,43 +601,18 @@ loadState()
             //
             if ((llList2String(desc, 5) != (string)chan(llGetKey())) && (isPet == FALSE) && (isHuman == FALSE)) //Also resets eggs!
             {
-                llOwnerSay(TXT_RESETTING);
-                llSetObjectDesc("");
-                llSleep(1.0);
+                if(!g_iRestartedSim){
+                    llOwnerSay(TXT_RESETTING);
+                    llSetObjectDesc("");
+                    llSleep(1.0);
+                }else {
+                    APPLYPARAMS(desc);
+                    saveState();
+                }
             }
             else
             {
-                if (llList2Integer(desc,1) == 1) sex = "Female"; else sex = "Male";
-                water = llList2Integer(desc, 2);
-                food  = llList2Integer(desc, 3);
-                epoch = 1; // Assume child
-                createdTs = llList2Integer(desc, 4);
-                geneA = llList2Integer(desc, 6);
-                geneB = llList2Integer(desc, 7);
-                fatherGene = llList2Integer(desc, 8);
-                pregnantTs = llList2Integer(desc, 9);
-                name = llList2String(desc, 10);
-                // optional newer items so see if there is a version number stored next
-                if (llList2Integer(desc, 11) != 0)
-                {
-                    RADIUS  = llList2Integer(desc, 12);
-                    SURFACE = llList2String(desc, 13);
-                    CHATTY  = llList2Integer(desc, 14);
-                    languageCode = llList2String(desc, 15);
-                    if (llList2Vector(desc, 19) != ZERO_VECTOR)
-                    {
-                        givenBirth = llList2Integer(desc, 16);
-                        epoch = llList2Integer(desc, 17);
-                        labelType = llList2Integer(desc, 18);
-                        initpos = llList2Vector(desc, 19);
-                        scaleFactor = llList2Float(desc, 20);
-                        AN_AUTO_POO = llList2Integer(desc, 21);
-                        savedRot = llList2Rot(desc, 22);
-                        savedPos = llList2Vector(desc, 23);
-                        SLEEP_MODE = llList2Integer(desc, 24);
-                        feedPet = llList2Integer(desc, 25);
-                    }
-                }
+                APPLYPARAMS(desc);
             }
         }
         else
@@ -1336,9 +1344,17 @@ doTouch(key toucher)
     }
 }
 
-
+integer g_iRestartedSim;
 default
 {
+    changed(integer i)
+    {
+        if(i & CHANGED_REGION_START)
+        {
+            // the following is for the load oar command!
+            g_iRestartedSim = 1; // the object id changes on sim oar load.
+        }
+    }
     state_entry()
     {
         isPet = FALSE;
