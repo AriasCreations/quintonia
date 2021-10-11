@@ -158,11 +158,11 @@ default
         {
             if(llJsonGetValue(m,["product"])==llGetObjectName())
             {
-                sHash = llJsonGetValue(m,["hash"]);
+                string sHash = llJsonGetValue(m,["hash"]);
                 if(llMD5String(GetManifest(),0x9f) == sHash)
                 {
                     g_kAcked = i;
-                    g_iTicked=llGetUnixTime();
+                    g_iAcked=llGetUnixTime();
                     
                 }
             }
